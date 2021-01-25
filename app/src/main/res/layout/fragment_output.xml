@@ -25,7 +25,7 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Display2" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/user_name_output"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"

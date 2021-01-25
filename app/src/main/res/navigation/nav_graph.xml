@@ -17,6 +17,10 @@
         android:id="@+id/outputFragment"
         android:name="ca.tetervak.hellouser1.OutputFragment"
         android:label="fragment_output"
-        tools:layout="@layout/fragment_output" />
+        tools:layout="@layout/fragment_output" >
+        <argument
+            android:name="userName"
+            app:argType="string" />
+    </fragment>
     <action android:id="@+id/action_global_input" app:destination="@id/inputFragment" />
 </navigation>

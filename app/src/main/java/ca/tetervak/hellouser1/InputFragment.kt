@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import ca.tetervak.hellouser1.databinding.FragmentInputBinding
 
 class InputFragment : Fragment() {
@@ -15,6 +16,12 @@ class InputFragment : Fragment() {
     ): View {
         // Inflate the layout for this fragment
         val binding = FragmentInputBinding.inflate(layoutInflater, container,false)
+
+        binding.submitButton.setOnClickListener {
+            val userName = binding.userNameInput.text.toString()
+            val action = InputFragmentDirections.actionInputToOutput(userName)
+            findNavController().navigate(action)
+        }
 
         return binding.root
     }
